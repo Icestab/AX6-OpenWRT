@@ -13,6 +13,7 @@ function git_sparse_clone() {
 #添加科学上网源
 git_sparse_clone main https://github.com/fw876/helloworld luci-app-ssr-plus
 git_sparse_clone main https://github.com/fw876/helloworld shadowsocks-rust
+git_sparse_clone main https://github.com/fw876/helloworld shadowsocksr-libev
 #git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall-packages package/openwrt-passwall-packages
 #git clone --depth 1 https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
 git clone --depth 1 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
