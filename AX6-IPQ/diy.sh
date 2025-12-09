@@ -69,6 +69,12 @@ if [ -d *"luci-theme-argon"* ]; then
 
 	cd $PKG_PATH && echo "theme-argon has been fixed!"
 fi
+# 移除国内下载源
+PROJECT_MIRRORS_FILE="./scripts/projectsmirrors.json"
+if [ -f "$PROJECT_MIRRORS_FILE" ]; then
+    sed -i '/.cn\//d; /tencent/d; /aliyun/d' "$PROJECT_MIRRORS_FILE"
+fi
+
 #编译器优化
 if [[ $WRT_TARGET != *"X86"* ]]; then
 	echo "CONFIG_TARGET_OPTIONS=y" >> ./.config
